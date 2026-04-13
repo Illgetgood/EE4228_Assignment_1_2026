@@ -7,9 +7,9 @@ import numpy as np
 # Path to dataset (dynamic based on current directory)
 BASE_PATH = os.path.dirname(os.path.abspath(__file__)) if '__file__' in locals() else os.getcwd()
 
-TXT_FILE = os.path.join(BASE_PATH, "dataset", "member_faces", "member.txt")
+TXT_FILE = os.path.join(BASE_PATH, "dataset", "Members Face", "member.txt")
 # Output folder
-OUTPUT_FOLDER = os.path.join(BASE_PATH, "dataset", "member_faces", "modified")
+OUTPUT_FOLDER = os.path.join(BASE_PATH, "dataset", "Members Face", "modified")
 
 # Load face detector
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
@@ -103,7 +103,7 @@ def readFileNames():
     try:
         inFile = open(TXT_FILE)
     except:
-        raise IOError("Cannot find yale.txt in " + BASE_PATH)
+        raise IOError("Cannot find member.txt in " + BASE_PATH)
 
     picPath = []
     picIndex = []
